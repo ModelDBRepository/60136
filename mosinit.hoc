@@ -1,0 +1,11 @@
+load_file("nrngui.hoc")
+load_file("toniclamina1neuron.ses")
+
+// modify from original simulation for faster demo:
+
+steps_per_ms=1
+dt=1
+
+// original settings were
+// steps_per_ms=10
+// dt =0.01

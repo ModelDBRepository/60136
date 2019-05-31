@@ -1,0 +1,78 @@
+Readme for model associated with the paper
+
+Prescott SA, De Koninck Y. (2005) Integration time in a subset of
+spinal lamina I neurons is lengthened by sodium and calcium currents
+acting synergistically to prolong subthreshold depolarization. 
+J Neurosci. 25(19):4743-54. 
+
+Abstract:
+Lamina I of the spinal dorsal horn plays an important role in 
+processing and relaying nociceptive information to the brain. 
+It comprises physiologically distinct cell types that process 
+information in fundamentally different ways: tonic neurons fire 
+repetitively during stimulation and display prolonged EPSPs, 
+suggesting operation as integrators, whereas single-spike neurons
+act like coincidence detectors. Using whole-cell recordings from a 
+rat spinal slice preparation,weset out to determine the basis for 
+prolonged EPSPs in tonic cells and the implications for signal 
+processing. Kinetics of synaptic currents could not explain 
+differences in EPSP kinetics. Instead, tonic neurons were found to 
+express a persistent sodium current, INa,P , that amplified and 
+prolonged depolarization in response to brief stimulation. Tonic 
+neurons also expressed a persistent calcium current, ICa,P , that 
+contributed to prolongation but not to amplification. Simulations
+using NEURON software demonstrated that INa,P was necessary and 
+sufficient to explain amplification, whereas INa,P and ICa,P acted
+synergistically to prolong depolarization: initial activation of the
+slower current (ICa,P) depended on the faster current (INa,P) but
+maintained activation of the faster current likewise depended on the
+slower current. Additional investigation revealed that INa,P and 
+ICa,P could dramatically increase integration time (>30X) and 
+thereby encourage temporal summation but at the expense of spike 
+time precision. Thus, by prolonging subthreshold depolarization, 
+intrinsic inward currents allow tonic neurons in spinal lamina I
+to specialize as integrators that are optimally suited to encode
+stimulus intensity.
+
+Model Notes:
+Model demonstrates mechanism whereby two kinetically distinct 
+inward currents act synergistically to prolong subthreshold 
+depolarization.  The important currents are a persistent Na current
+(with fast kinetics) and a persistent Ca current (with slower 
+kinetics).  Model also includes a slow K current and transient Ca 
+current, in addition to standard HH currents.  Model parameters are
+set to values used in Fig. 8A.  Simulation shows prolonged 
+depolarizations in response to two brief stimuli.
+
+Usage:
+Auto-launch from ModelDB (unix and pc).  Press init and run()
+button.
+
+Alternatively download the zip archive. Then depending on your platform:
+
+mswin:
+Expand the archive.  Run mknrndll and traverse to the newly created
+directory and click make the nrnmech.dll
+Then double click the mosinit.hoc file in windows explorer.
+
+Unix:
+Expand the archive with 
+unzip *.zip
+Compile the NEURON mod files by running nrnivmodl in the newly created directory.  
+Type 
+nrngui mosinit.hoc
+to start the simulation
+
+mac OS X.
+
+Drag and drop the zip file on the mos2nrn icon in the Neuron application folder.
+The mod files are automatically compiled and the simulation starts automatically.
+
+---
+
+Note: For demonstration purposes the integration time step, dt, is set
+larger (1 ms) than was used in the paper (0.01ms) so that
+the simulation runs faster.  You can either uncheck the red check marks
+on the Run Control window to get the original values or you can type
+dt=0.01 at the oc> prompt.
+
